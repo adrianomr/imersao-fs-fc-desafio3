@@ -2,11 +2,15 @@
 version: "3"
 services:
   backend:
+    stdin_open: true
+    tty: true
     build: rest-api
     ports:
       - "3000:3000"
      
   front:
+    stdin_open: true
+    tty: true
     build: react-frontend
     ports:
       - "3001:3000"
