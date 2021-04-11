@@ -16,4 +16,4 @@ spec:
         - name: rest-api
           image: adrianomr/rest-api
           ports:
-            - containerPort: 8000
+            - containerPort: 3000

@@ -16,4 +16,4 @@ spec:
         - name: react-frontend
           image: adrianomr/react-frontend
           ports:
-            - containerPort: 3000
+            - containerPort: 80
