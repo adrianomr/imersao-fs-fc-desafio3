@@ -1,0 +1,8 @@
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rest-api-conf
+data:
+  env: |
+    MONGO_DSN=mongodb://root:root@mongodb/nest?authSource=admin
