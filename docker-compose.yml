@@ -1,18 +1,16 @@
- 
 version: "3"
 services:
-  backend:
-    stdin_open: true
-    tty: true
+  rest-api:
     build: rest-api
-    ports:
-      - "3000:3000"
-     
-  front:
-    stdin_open: true
-    tty: true
+    entrypoint: ./.docker/entrypoint.sh
+    ports: 
+      - 3000:3000
+    volumes:
+      - ./rest-api:/home/node/app
+  react-frontend:
     build: react-frontend
-    ports:
-      - "3001:3000"
-    depends_on: 
-      - backend
+    entrypoint: ./.docker/entrypoint.sh
+    ports: 
+      - 3001:3000
+    volumes:
+      - ./react-frontend:/home/node/app
